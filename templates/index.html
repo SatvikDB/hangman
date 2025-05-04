@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman Game</h1>
+        
+        <div class="game-container">
+            <div class="hangman-container">
+                <svg height="250" width="200" class="hangman-drawing">
+                    <!-- Gallows -->
+                    <line x1="20" y1="230" x2="100" y2="230" stroke="black" stroke-width="3" />
+                    <line x1="60" y1="230" x2="60" y2="20" stroke="black" stroke-width="3" />
+                    <line x1="60" y1="20" x2="150" y2="20" stroke="black" stroke-width="3" />
+                    <line x1="150" y1="20" x2="150" y2="50" stroke="black" stroke-width="3" />
+                    
+                    <!-- Head -->
+                    <circle cx="150" cy="70" r="20" class="hangman-part" id="head" style="display: none;" />
+                    
+                    <!-- Body -->
+                    <line x1="150" y1="90" x2="150" y2="150" class="hangman-part" id="body" style="display: none;" />
+                    
+                    <!-- Left Arm -->
+                    <line x1="150" y1="110" x2="120" y2="100" class="hangman-part" id="left-arm" style="display: none;" />
+                    
+                    <!-- Right Arm -->
+                    <line x1="150" y1="110" x2="180" y2="100" class="hangman-part" id="right-arm" style="display: none;" />
+                    
+                    <!-- Left Leg -->
+                    <line x1="150" y1="150" x2="130" y2="180" class="hangman-part" id="left-leg" style="display: none;" />
+                    
+                    <!-- Right Leg -->
+                    <line x1="150" y1="150" x2="170" y2="180" class="hangman-part" id="right-leg" style="display: none;" />
+                </svg>
+            </div>
+            
+            <div class="game-info">
+                <div class="word-display" id="word-display"></div>
+                <div class="message" id="message"></div>
+                <div class="attempts">Attempts left: <span id="attempts-left">6</span></div>
+                <div class="guessed-letters">
+                    <p>Guessed letters:</p>
+                    <div id="guessed-letters-container"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="keyboard" id="keyboard"></div>
+        
+        <div class="controls">
+            <button id="new-game-btn" class="btn">New Game</button>
+            <div class="score">
+                <span>Wins: <span id="wins">0</span></span>
+                <span>Losses: <span id="losses">0</span></span>
+            </div>
+        </div>
+        
+        <div class="difficulty">
+            <p>Difficulty:</p>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+       
+    </footer>
+    
+    <script src="static/js/script.js"></script>
+</body>
+</html>
