@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +50,13 @@
             
             <div class="game-info">
                 <div class="word-display" id="word-display"></div>
+                <div class="category-display" id="category-display"></div>
                 <div class="message" id="message"></div>
                 <div class="attempts">Attempts left: <span id="attempts-left">6</span></div>
+                <div class="hint-section">
+                    <button id="hint-btn" class="hint-btn">Get Hint</button>
+                    <div id="hint-display" class="hint-display"></div>
+                </div>
                 <div class="guessed-letters">
                     <p>Guessed letters:</p>
                     <div id="guessed-letters-container"></div>
@@ -72,7 +85,7 @@
     </div>
     
     <footer>
-       
+       <p>Hangman Game with Hints</p>
     </footer>
     
     <script src="static/js/script.js"></script>
